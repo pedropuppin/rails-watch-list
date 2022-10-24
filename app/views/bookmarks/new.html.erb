@@ -1,0 +1,9 @@
+<div class="col-6 m-auto mt-5">
+  <h1>Add a movie to your <%= @list.name %> list</h1>
+  <%= simple_form_for [@list, @bookmark] do |f| %>
+    <%= f.input :movie_id, collection: Movie.all, include_hidden: false %>
+    <%= f.input :comment, placeholder: "Add a comment about the movie" %>
+    <%= f.submit 'Add Tag', class: 'btn btn-primary mb-2' %>
+  <% end %>
+  <%= link_to "Cancel", list_path(@list), class: "text-danger text-decoration-none" %>
+</div>

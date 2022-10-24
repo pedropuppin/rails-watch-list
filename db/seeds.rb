@@ -20,3 +20,6 @@ puts 'Creating movies...'
 end
 
 puts "Success!"
+
+
+# https://api.themoviedb.org/3/movie/{movie_id}?api_key=<<52409615a4c2eb0bbf7a5bd174da1245>>&language=en-US

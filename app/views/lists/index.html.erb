@@ -1,2 +1,28 @@
-<h1>Lists#index</h1>
-<p>Find me in app/views/lists/index.html.erb</p>
+<div class="cover mb-4">
+  <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('https://upload.wikimedia.org/wikipedia/commons/a/ac/Cinema.jpg');">
+    <div class="container">
+      <h1>Awesome <strong>movie app</strong> to <strong>share with friends</strong>!</h1>
+      <p>Build your own custom movie lists.</p>
+      <%= link_to "Create a list", new_list_path, class: "btn btn-flat" %>
+    </div>
+  </div>
+</div>
+
+<div class="conteiner mx-4 py-5">
+  <div class="d-flex align-items-center justify-content-between mb-3">
+    <h3 calss="mb-0">My lists</h3>
+    <%= link_to "Create a movie list", new_list_path, class: "btn-ghost" %>
+  </div>
+
+  <div class="row">
+    <% @lists.each do | list | %>
+      <div class="co-12 col-sm-6 col-md-4 mb-3">
+        <%= link_to list_path(list), class:"text-decoration-none" do %>
+          <div class="card-category" data-controller="aos" data-aos="zoom-in" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://upload.wikimedia.org/wikipedia/commons/a/ac/Cinema.jpg')">
+            <%= list.name %>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+</div>
