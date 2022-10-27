@@ -45,3 +45,16 @@
   font-weight: bold;
   text-decoration: none;
 }
+
+.btn-erase {
+  color: white;
+  padding: 8px 24px;
+  border-radius: 4px;
+  background: #c90000;
+  transition: background 0.3s ease;
+}
+
+.btn-erase:hover {
+  background: #810000;
+  color: white;
+}
